@@ -1,0 +1,45 @@
+sudo: false
+language: c
+cache:
+  directories:
+  - "$HOME/.ghc"
+  - "$HOME/.cabal"
+  - "$TRAVIS_BUILD_DIR/vendor/bundle"
+before_cache:
+- rm -f $HOME/.cabal/logs/*
+- rm -f $HOME/.cabal/packages/hackage.haskell.org/build-reports.log
+addons:
+  apt:
+    sources:
+    - hvr-ghc
+    packages:
+    - ghc-8.4.2
+    - cabal-install-2.2
+    - texlive
+    - texlive-latex-extra
+    - lmodern
+before_install:
+- export PATH=$PATH:/opt/ghc/8.4.2/bin:/opt/cabal/2.2/bin:$HOME/.cabal/bin
+- travis_retry cabal update
+- rvm install 2.4.4
+install:
+- cabal install Cabal-2.2.0.1 pandoc-2.2 pandoc-crossref pandoc-citeproc pandoc-citeproc-preamble pandoc-sidenote
+- bundle install --path vendor/bundle
+script:
+- make book
+- make site
+- make tests
+after_success:
+- bash scripts/deploy.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: hsx4Ujf8lV65KwoHZDer0g6ka+QHHOzESm8Ns+fE5MOrK63FikcU8UkHEHtWhk4QUBITc1J2uCVcZpO1HYuCu/AApGEjihAN1k/hMLPy6BYB5ZsR6aWktR2dDRF65y+zaCShUahBLGYCb86vu0Q55QUB+kJqwMCHzrfM1Z3665sA02gkvkyqgRSKsOAO8WXPe53fvL54cEYtd1Y0ceI6+GKtOpSyj/UMmDeAxHLIagsRUaNse3gaRpL1As19ZlYUTZIUgxoELmq16N1g4zEXJjifaaoVWtBicEfkS2IBuEDpjzWMt1C9Mfa9JG2YykPWdNrYXbVTZfYZ3ezZpLSbjWeXEDMH7FkCxVRC8K7dirMPjGN9rrniFUxWGy6QzSJ/n7wuCG9NIXwSsHCaYAUiY18YLOhT8/gH4CO7Np8WspGL3OQJRtipSzM8ZscrlXlz5iU+ovjbjVyRCYNI0vvA//I5V8Pe2By/sBknHuDYrbTnc41IYLfqs6LwDYnP1X1HWL02GtQDXuzI1F+8wKxHRU7EhEnXQ6KQYhOkm8O9fS3eoiSSDX01NfeNhUl2IN8o3ASAReFlWaEbUPWp9ErTR3GYonqmHJTJE+ey4mgDzAWFlc7ZdtxSuYuFrPI+KwLWrTeG9jBxc/dh0lJRqg3WOLe5acpUe24OCvzo48Eed0g=
+  file: output/sample-book.pdf
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: open-review-toolkit/open-review-toolkit
+env:
+  global:
+    secure: SGpAXThiJbptQzKTNqgdEc/RLYiaBdcjyFGxXZpcB23nK8Tcf/Kz1CtkOfWzOzLYzJrJYUsR3HveAQLr1ToKY80qECDZKgy6ZQztubysLI3vs1PirmGK2WVp5Z95nO5M22wHga9yvEOjLC0TH0QZ4FPETQr4f5uxRyrn8cKWaX8MoJmlPkOgW0sFw2qB3iIKaOdKL3ZGk2aIB4AyKTefMCaCgY6aBvCZLOoidhC2F4Ic/YXowmViMzXzeOhLg1iHy89auqUJLQ5DG3LksGMqrPyaCfsU1ZE+W9X0D0Ncl2bWqEuCeqTi6HB1zU+4zu2t2SsNyK/8PEHpZC1SKeDx9FiiKSczlmkSQ7Hs019P48zEmIovzJKLeSMqW/XPS1jTFSMKA+lNIxm46E3eBHKyfXOtX30FNuc50s2Yk4FHiJU8zFxs4/zjHGQgOSK+UH78fIHZajHC2xGYVrui0KlvDykROtjnANpiM8f7AGl1c53F/jk9jI6T6pzrWCcEjFQwVUWY4ErPy+F/1JpwZIYhK7V+nXplAfDR8dUiqY8akHGCOcQzIkp7NpigYe6oSHGJZaZktEnA52ltYf4z1iQrUsEiDHGGCREbF8ni8csyr7XAx30uIF/OO3SMnnOEijmLghHcyDmR69Xz9VjnbVkT5AYN5GTy9fnaiw4/K+/BZEg=

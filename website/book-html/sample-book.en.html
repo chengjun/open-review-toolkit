@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Anonymous">
+  <title>Sample Book:Sub-title Here</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+  .figure > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78121233-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<div class="container">
+<div id="header">
+<h1 class="title">Sample Book:Sub-title Here</h1>
+<h2 class="author">Anonymous</h2>
+<h3 class="date">2016 Open Review Edition www.example.com</h3>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#acknowledgements">Acknowledgements</a></li>
+<li><a href="#preface">Preface</a></li>
+<li>
+<a href="#introduction"><span class="toc-section-number">1</span> Introduction</a><ul>
+<li><a href="#mini-table-of-contents"><span class="toc-section-number">1.1</span> Mini Table of Contents</a></li>
+<li><a href="#sec:tables"><span class="toc-section-number">1.2</span> Tables</a></li>
+<li><a href="#sec:lists"><span class="toc-section-number">1.3</span> Lists</a></li>
+<li><a href="#sec:figures"><span class="toc-section-number">1.4</span> Figures</a></li>
+<li><a href="#sec:equations"><span class="toc-section-number">1.5</span> Equations</a></li>
+<li><a href="#sec:citations"><span class="toc-section-number">1.6</span> Citations</a></li>
+<li><a href="#footnotes"><span class="toc-section-number">1.7</span> Footnotes</a></li>
+<li><a href="#blockquotes"><span class="toc-section-number">1.8</span> Blockquotes</a></li>
+<li><a href="#sec:cross-ref"><span class="toc-section-number">1.9</span> Cross referencing</a></li>
+</ul>
+</li>
+<li>
+<a href="#another-chapter"><span class="toc-section-number">2</span> Another Chapter</a><ul>
+<li>
+<a href="#sub-section"><span class="toc-section-number">2.1</span> Sub-section</a><ul>
+<li>
+<a href="#third-level-section"><span class="toc-section-number">2.1.1</span> Third-level section</a><ul>
+<li><a href="#fourth-level-section"><span class="toc-section-number">2.1.1.1</span> Fourth-level section</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<section id="acknowledgements" class="level1 unnumbered">
+<h1>Acknowledgements</h1>
+
+<p>I would like to thank everyone who made this book possible.</p>
+</section>
+<section id="preface" class="level1 unnumbered">
+<h1>Preface</h1>
+
+<p>The author’s preface goes here.</p>
+
+</section>
+<section id="introduction" class="level1">
+<h1>
+<span class="header-section-number">1</span> Introduction</h1>
+
+<section id="mini-table-of-contents" class="level2">
+<h2>
+<span class="header-section-number">1.1</span> Mini Table of Contents</h2>
+<p>The mini table of contents that you see in the PDF is created by adding <code>\minitoc</code> to the markdown file after the header for the chapter.</p>
+</section>
+<section id="sec:tables" class="level2">
+<h2>
+<span class="header-section-number">1.2</span> Tables</h2>
+<p>You can create tables in your markdown files, and you can reference Table 1.1 from the text. For more on references see Section 1.9.</p>
+<div id="tbl:example_table">
+<table>
+<caption>Table 1.1: Caption of example table.</caption>
+<thead>
+<tr class="header">
+<th>Header #1</th>
+<th>Header #2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>data</td>
+<td>more data</td>
+</tr>
+<tr class="even">
+<td>data 2</td>
+<td>more data 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="sec:lists" class="level2">
+<h2>
+<span class="header-section-number">1.3</span> Lists</h2>
+<p>Here’s what a list looks like:</p>
+<ol type="1">
+<li>Item #1.</li>
+<li>Item #2.</li>
+<li>Item #3.</li>
+</ol>
+</section>
+<section id="sec:figures" class="level2">
+<h2>
+<span class="header-section-number">1.4</span> Figures</h2>
+<p>Any figures for your book should be added to the <code>figures/</code> directory.</p>
+<p>Figure 1.1 shows Anscomb’s quartet which was first proposed in <span class="citation" data-cites="anscombe_graphs_1973" data-ref-id='["#ref-anscombe_graphs_1973"]' data-ref-html='
+&lt;p&gt;Anscombe, F. J. 1973. “Graphs in Statistical Analysis.” &lt;em&gt;The American Statistician&lt;/em&gt; 27 (1): 17–21. &lt;a href="https://doi.org/10.2307/2682899" class="uri"&gt;https://doi.org/10.2307/2682899&lt;/a&gt;.&lt;/p&gt;
+'>Anscombe (1973)</span>.</p>
+<figure>
+<img src="figures/anscombes_quartet.png" alt="Figure 1.1: Anscombe’s Quartet, which was first proposed in Anscombe (1973). Image created by “Schultz” and used under a Creative Commons license." id="fig:anscombe"><figcaption>Figure 1.1: Anscombe’s Quartet, which was first proposed in <span class="citation" data-cites="anscombe_graphs_1973" data-ref-id='["#ref-anscombe_graphs_1973"]' data-ref-html='
+&lt;p&gt;Anscombe, F. J. 1973. “Graphs in Statistical Analysis.” &lt;em&gt;The American Statistician&lt;/em&gt; 27 (1): 17–21. &lt;a href="https://doi.org/10.2307/2682899" class="uri"&gt;https://doi.org/10.2307/2682899&lt;/a&gt;.&lt;/p&gt;
+'>Anscombe (1973)</span>. Image created by “Schultz” and used under a <a href="https://commons.wikimedia.org/wiki/File:Anscombe%27s_quartet_3.svg">Creative Commons license</a>.</figcaption>
+</figure>
+<figure>
+<img src="figures/duchamp_fountain.png" alt="Figure 1.2: Fountain by Marcel Duchamp. Fountain is an example of a Readymade, where an artist sees something that already exists in the world then creatively repurposes it for art. Photo of Fountain by Alfred Stiglitz, 1917 (Source: Wikimedia Commons)." id="fig:readymade_custommade"><figcaption>Figure 1.2: <em>Fountain</em> by Marcel Duchamp. <em>Fountain</em> is an example of a Readymade, where an artist sees something that already exists in the world then creatively repurposes it for art. Photo of <em>Fountain</em> by Alfred Stiglitz, 1917 (Source: <a href="https://commons.wikimedia.org/wiki/File:Duchamp_Fountaine.jpg">Wikimedia Commons</a>).</figcaption>
+</figure>
+</section>
+<section id="sec:equations" class="level2">
+<h2>
+<span class="header-section-number">1.5</span> Equations</h2>
+<p>When <span class="math inline">\(a \ne 0\)</span>, there are two solutions to <span class="math inline">\(ax^2 + bx + c = 0\)</span> and they are</p>
+<p><span id="eq:quad"><span class="math display">\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\qquad(1.1)\]</span></span></p>
+<p>This paragraph does not have any formulas but should render the dollar sign properly in $5 and $10.</p>
+</section>
+<section id="sec:citations" class="level2">
+<h2>
+<span class="header-section-number">1.6</span> Citations</h2>
+<p>Citations to articles, books, and other materials are handled by BibTeX, and your .bibtex file should be stored in <code>support/sample-book.bibtex</code>. If you want to change the name of your BibTeX file you will need to change <code>Makefile</code>.</p>
+<p>You can make inline citiations like this: <span class="citation" data-cites="anscombe_graphs_1973" data-ref-id='["#ref-anscombe_graphs_1973"]' data-ref-html='
+&lt;p&gt;Anscombe, F. J. 1973. “Graphs in Statistical Analysis.” &lt;em&gt;The American Statistician&lt;/em&gt; 27 (1): 17–21. &lt;a href="https://doi.org/10.2307/2682899" class="uri"&gt;https://doi.org/10.2307/2682899&lt;/a&gt;.&lt;/p&gt;
+'>Anscombe (1973)</span>. And, you can have citations come at the end of a sentence <span class="citation" data-cites="anscombe_graphs_1973" data-ref-id='["#ref-anscombe_graphs_1973"]' data-ref-html='
+&lt;p&gt;Anscombe, F. J. 1973. “Graphs in Statistical Analysis.” &lt;em&gt;The American Statistician&lt;/em&gt; 27 (1): 17–21. &lt;a href="https://doi.org/10.2307/2682899" class="uri"&gt;https://doi.org/10.2307/2682899&lt;/a&gt;.&lt;/p&gt;
+'>(Anscombe 1973)</span>. For more on citation see the pandoc documentation: http://pandoc.org/.</p>
+</section>
+<section id="footnotes" class="level2">
+<h2>
+<span class="header-section-number">1.7</span> Footnotes</h2>
+<p>Here is a footnote reference,<a href="#fn1" class="footnote-ref" id="fnref1" data-ref-html="&lt;p&gt;Here is the footnote.&lt;/p&gt;"><sup>1</sup></a> and another.<a href="#fn2" class="footnote-ref" id="fnref2" data-ref-html="&lt;p&gt;Here’s one with multiple blocks.&lt;/p&gt;
+&lt;p&gt;Subsequent paragraphs are indented to show that they belong to the previous footnote.&lt;/p&gt;
+&lt;p&gt;The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items.&lt;/p&gt;"><sup>2</sup></a></p>
+<p>This paragraph won’t be part of the note, because it isn’t indented.</p>
+</section>
+<section id="blockquotes" class="level2">
+<h2>
+<span class="header-section-number">1.8</span> Blockquotes</h2>
+<p>Here’s a blockquote:</p>
+<blockquote>
+<p>Here’s a quote with a list.</p>
+<ol type="1">
+<li>Item 1</li>
+<li>Item 2</li>
+</ol>
+</blockquote>
+</section>
+<section id="sec:cross-ref" class="level2">
+<h2>
+<span class="header-section-number">1.9</span> Cross referencing</h2>
+<p>Cross references like the ones in the sections above are handled by pandoc-crossref. You can read more about that software and its syntax at https://github.com/lierdakil/pandoc-crossref.</p>
+</section>
+</section>
+<section id="another-chapter" class="level1">
+<h1>
+<span class="header-section-number">2</span> Another Chapter</h1>
+<p>Here’s another chapter.</p>
+<section id="sub-section" class="level2">
+<h2>
+<span class="header-section-number">2.1</span> Sub-section</h2>
+<p>When creating the website, each section is on its own page up to four levels deep. If you have sections deeper than that, they will be included on an ancestor’s page.</p>
+<section id="third-level-section" class="level3">
+<h3>
+<span class="header-section-number">2.1.1</span> Third-level section</h3>
+<p>This section should show up on its own page.</p>
+<section id="fourth-level-section" class="level4">
+<h4>
+<span class="header-section-number">2.1.1.1</span> Fourth-level section</h4>
+<p>This section should show up on its own page but will have its descendent sections included in it as well.</p>
+<section id="fifth-level-section" class="level5">
+<h5>
+<span class="header-section-number">2.1.1.1.1</span> Fifth-level section</h5>
+<p>Here’s a fifth-level section.</p>
+<section id="sixth-level-section" class="level6">
+<h6>
+<span class="header-section-number">2.1.1.1.1.1</span> Sixth-level section</h6>
+<p>Here’s a sixth-level section.</p>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-anscombe_graphs_1973">
+<p>Anscombe, F. J. 1973. “Graphs in Statistical Analysis.” <em>The American Statistician</em> 27 (1): 17–21. <a href="https://doi.org/10.2307/2682899" class="uri">https://doi.org/10.2307/2682899</a>.</p>
+</div>
+</div>
+</section>
+<section class="footnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Here is the footnote.</p></li>
+<li id="fn2">
+<p>Here’s one with multiple blocks.</p>
+<p>Subsequent paragraphs are indented to show that they belong to the previous footnote.</p>
+<p>The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items.</p>
+</li>
+</ol>
+</section>
+</div>
+<script defer async src="https://hypothes.is/embed.js"></script>
+<script>window.hypothesisConfig = function () { return {showHighlights: false}; };</script>
+</body>
+</html>
